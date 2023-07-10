@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/drink-coctail",
+            "outputPath": "dist/drinkCoctail/browser",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -91,8 +91,65 @@
             ],
             "scripts": []
           }
+        },
+        "server": {
+          "builder": "@angular-devkit/build-angular:server",
+          "options": {
+            "outputPath": "dist/drinkCoctail/server",
+            "main": "server.ts",
+            "tsConfig": "tsconfig.server.json"
+          },
+          "configurations": {
+            "production": {
+              "outputHashing": "media"
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "sourceMap": true,
+              "extractLicenses": false,
+              "vendorChunk": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve-ssr": {
+          "builder": "@nguniversal/builders:ssr-dev-server",
+          "configurations": {
+            "development": {
+              "browserTarget": "drinkCoctail:build:development",
+              "serverTarget": "drinkCoctail:server:development"
+            },
+            "production": {
+              "browserTarget": "drinkCoctail:build:production",
+              "serverTarget": "drinkCoctail:server:production"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "prerender": {
+          "builder": "@nguniversal/builders:prerender",
+          "options": {
+            "routes": [
+              "/"
+            ]
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "drinkCoctail:build:production",
+              "serverTarget": "drinkCoctail:server:production"
+            },
+            "development": {
+              "browserTarget": "drinkCoctail:build:development",
+              "serverTarget": "drinkCoctail:server:development"
+            }
+          },
+          "defaultConfiguration": "production"
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "51528cdf-8561-4a71-b6ad-0a102f3d9f5d"
   }
 }
