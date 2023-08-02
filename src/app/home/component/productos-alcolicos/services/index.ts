@@ -1,2 +1,1 @@
-export * from './productos-alcolicos.module';
-export * from './productos-alcolicos.service';
+export * from '../productos-alcolicos.module';
