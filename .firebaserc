@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "app-clon-trello"
-  }
+    "default": "app-clon-trello",
+    "drinkCoctail": "app-clon-trello"
+  },
+  "targets": {},
+  "etags": {}
 }

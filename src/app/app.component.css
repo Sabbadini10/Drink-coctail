@@ -1,0 +1,7 @@
+.drinkCocktailContainer{
+  background-image: url('../assets/Wave.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-clip: padding-box;
+  background-attachment: fixed;
+}
