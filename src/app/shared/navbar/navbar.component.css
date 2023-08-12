@@ -1,8 +1,19 @@
 .Navbar{
-  background-color: #bb6c74;
   height: 80px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
 }
 
 .example-spacer {
   flex: 1 1 auto;
+}
+
+
+
+
+
+@media (min-width: 1024px) {
+.product-alcolic-button-burguer{
+  display:none
+}
 }

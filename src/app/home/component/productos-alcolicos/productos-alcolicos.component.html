@@ -1,27 +1,12 @@
-<!--  <div class="flex flex-row justify-around flex-wrap">
-<section class="card p-3 m-3" *ngFor="let data of _data">
-<article>
-<h1 class="productTitle">{{data.strDrink}}</h1>
-</article>
-<article class="image">
-  <img class="productos-alcolicos-image " [src]="data.strDrinkThumb"/>
-</article>
-<div class="cost">
-		$60.99
-	</div>
-<button class="addtocart">Add to Cart</button>
-</section>
- </div> -->
-
  <div  class="container flex flex-row justify-around flex-wrap">
     <div class="box p-3 m-3" *ngFor="let data of _data">
          <img class="productos-alcolicos-image " [src]="data.strDrinkThumb"/>
         <div class="flex justify-center mt-2 mb-2">
-            <h1 class="">{{data.strDrink}}</h1>
+            <h1 class="text-slate-50">{{data.strDrink}}</h1>
         </div>
         <div class="flex flex-row items-center justify-around flex-wrap">
           <div>
- <p>$60.99</p>
+ <p class="text-slate-50">$60.99</p>
           </div>
           <div>
             <button class="button">
