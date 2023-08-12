@@ -1,7 +1,6 @@
 {
   "hosting": {
     "public": "public",
-    "site": "drink-coctail1",
     "ignore": [
       "firebase.json",
       "**/.*",
