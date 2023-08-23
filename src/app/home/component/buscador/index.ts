@@ -1,3 +1,3 @@
 export * from './buscador.component';
 export * from './buscador.module';
-export * from './buscador.service';
+export * from './service/buscador.service';

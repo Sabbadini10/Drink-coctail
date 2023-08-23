@@ -37,4 +37,10 @@ $drinkCoctail-theme: mat.define-light-theme((
 .mat-toolbar {
   background: none !important;
   color: none;
+  padding: 0 0px !important;
+}
+
+.mat-toolbar-row,
+.mat-toolbar-single-row{
+  height: none !important;
 }

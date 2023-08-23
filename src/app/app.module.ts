@@ -19,7 +19,7 @@ import { FooterComponent } from './shared/footer/footer.component';
         AppRoutingModule,
         BrowserAnimationsModule,
         SharedModule,
-      NavbarComponent,
+        NavbarComponent,
         FooterComponent
     ]
 })

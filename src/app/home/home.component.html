@@ -1,4 +1,8 @@
-<div>
-  <app-productos-alcolicos></app-productos-alcolicos>
+<div *ngIf="showSearchResults.length > 0">
+  <app-resultado ></app-resultado>
+</div>
+
+<div *ngIf="showSearchResults.length === 0">
+   <app-productos-alcolicos></app-productos-alcolicos>
 </div>
 

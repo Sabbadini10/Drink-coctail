@@ -1,1 +1,11 @@
-<p>buscador works!</p>
+ <div class="Navbar-mobile-search">
+ <!--  <div class="group">
+      <mat-icon class="navbar-buscador-button-search-container--icon"><i class="fa-brands fa-searchengin"></i></mat-icon>
+    <input placeholder="Search" type="search" class="input">
+</div>
+      -->
+     <form (ngSubmit)="searchCoctailName()">
+  <input type="text" [(ngModel)]="name" name="name" placeholder="Buscar ingrediente..." />
+  <button type="submit">Buscar</button>
+</form>
+

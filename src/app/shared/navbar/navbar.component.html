@@ -1,17 +1,50 @@
 
-  <div class="Navbar bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-blue-100 via-blue-300 to-blue-500 !important">
-    <mat-toolbar>
-     <button mat-icon-button class="example-icon product-alcolic-button-burguer" aria-label="Example icon-button with menu icon">
-      <mat-icon>menu</mat-icon>
+  <section class="Navbar bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-blue-100 via-blue-300 to-blue-500 !important">
+    <mat-toolbar class="flex flex-row justify-between items-center">
+     <button mat-icon-button class="example-icon product-alcolic-button-burguer" aria-label="Example icon-button with menu icon" (click)="toggleMenu()">
+      <mat-icon><i class="fa-solid fa-bars"></i></mat-icon>
     </button>
-    <span>Drink App</span>
-    <span class="example-spacer"></span>
-    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-      <mat-icon>favorite</mat-icon>
+    <article *ngIf="menuOpen">
+      <!-- Aquí puedes colocar tus categorías -->
+     <!--  <div class="Navbar-mobile-search">
+  <div class="group">
+      <mat-icon class="navbar-buscador-button-search-container--icon"><i class="fa-brands fa-searchengin"></i></mat-icon>
+    <input placeholder="Search" type="search" class="input">
+</div>
+     </div>
+-->
+<app-buscador></app-buscador>
+      <div class="navbar-sidebar bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-blue-100 via-blue-300 to-blue-500 !important" *ngIf="menuClose">
+<button mat-icon-button class="navbar-sidebar-button-close-container example-icon favorite-icon" aria-label="Category" (click)="toggleMenu()">
+             <mat-icon class="navbar-sidebar-button-close-container--icon"><i class="fa-solid fa-x"></i></mat-icon>
+           </button>
+      </div>
+
+    </article>
+    <span>Drink Coctail App</span>
+    <article class="navbar-icon-mobile">
+      <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      <mat-icon><i class="fa-solid fa-cart-shopping"></i></mat-icon>
     </button>
     <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-      <mat-icon>share</mat-icon>
+      <mat-icon><i class="fa-solid fa-user"></i></mat-icon>
     </button>
+    </article>
+     <app-buscador class="navbar-buscador-desktop"></app-buscador>
+    <article class="navbar-section-desktop">
+<div>
+      
+      <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      <mat-icon><i class="fa-brands fa-searchengin"></i></mat-icon>
+    </button>
+    </div>
+    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      <mat-icon><i class="fa-solid fa-cart-shopping"></i></mat-icon>
+    </button>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+      <mat-icon><i class="fa-solid fa-user"></i></mat-icon>
+    </button>
+  </article>
   </mat-toolbar>
-  </div>
+</section>
 
