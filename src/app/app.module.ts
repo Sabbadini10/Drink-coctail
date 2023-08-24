@@ -5,11 +5,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SharedModule } from './shared/shared.module';
-import { NavbarComponent } from "./shared/navbar/navbar.component";
-import { FooterComponent } from './shared/footer/footer.component';
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
+import { FormularioModule } from './component/formulario/formulario.module';
 
 @NgModule({
     declarations: [
@@ -22,8 +21,7 @@ import { provideFirestore,getFirestore } from '@angular/fire/firestore';
         AppRoutingModule,
         BrowserAnimationsModule,
         SharedModule,
-        NavbarComponent,
-        FooterComponent,
+        FormularioModule,
         provideFirebaseApp(() => initializeApp(environment.firebase)),
         provideFirestore(() => getFirestore())
     ]
