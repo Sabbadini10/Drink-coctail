@@ -7,6 +7,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SharedModule } from './shared/shared.module';
 import { NavbarComponent } from "./shared/navbar/navbar.component";
 import { FooterComponent } from './shared/footer/footer.component';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 
 @NgModule({
     declarations: [
@@ -20,7 +23,9 @@ import { FooterComponent } from './shared/footer/footer.component';
         BrowserAnimationsModule,
         SharedModule,
         NavbarComponent,
-        FooterComponent
+        FooterComponent,
+        provideFirebaseApp(() => initializeApp(environment.firebase)),
+        provideFirestore(() => getFirestore())
     ]
 })
 export class AppModule { }
